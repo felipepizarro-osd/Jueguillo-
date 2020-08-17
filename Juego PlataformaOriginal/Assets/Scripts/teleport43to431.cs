@@ -20,7 +20,7 @@ public class teleport43to431 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("nivel4.31", LoadSceneMode.Single);
+            SceneManager.LoadScene("nivel4.33", LoadSceneMode.Single);
         }
     }
 }
