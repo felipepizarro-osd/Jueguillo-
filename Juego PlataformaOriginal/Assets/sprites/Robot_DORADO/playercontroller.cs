@@ -71,7 +71,7 @@ public class playercontroller : MonoBehaviour
             rb2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             jump = false;
         }
-        Debug.Log(rb2d.velocity.x);
+        //Debug.Log(rb2d.velocity.x);
     }
     
     void OnBecameInvisible()
