@@ -52,5 +52,12 @@ public class BulletMovement : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
         }
+
+        if (col.tag == "Enemy")
+        {
+            GetComponent<ParticleSystem>().Play();
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
+        }
     }
 }
