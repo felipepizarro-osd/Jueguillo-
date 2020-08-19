@@ -9,10 +9,13 @@ public class BulletMovement : MonoBehaviour
     private Rigidbody2D bulletRB;
     public float bulletSpeed;
     public float bulletLife;
+    public static int damage;
+    public int damageRef;
 
 
     void Awake()
     {
+        damage = damageRef;
         bulletRB = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerTrans = player.transform;
@@ -40,7 +43,7 @@ public class BulletMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if ( col.tag == "Platform")
+        if ( col.tag == "Platform" || col.tag == "Enemy")
         {
             GetComponent<ParticleSystem>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
