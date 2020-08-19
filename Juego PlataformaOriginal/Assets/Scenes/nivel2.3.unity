@@ -166,6 +166,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: {fileID: 1628139999}
   to: {fileID: 153348304}
+--- !u!1 &596393378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596393381}
+  - component: {fileID: 596393380}
+  - component: {fileID: 596393379}
+  m_Layer: 0
+  m_Name: wallp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &596393379
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596393378}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b2e0367828e0cd342a87dabcd79d3659, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &596393380
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596393378}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &596393381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596393378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.815, y: 15.38, z: 0}
+  m_LocalScale: {x: 29.94643, y: 16.801756, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645655193
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,12 +459,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 133043341662898179, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 168314741119779935, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 189197463512365551, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 290014672407215692, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -406,6 +495,21 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 472581689049980551, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 496781329752951959, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098756983497432648, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252016479523615182, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -435,6 +539,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 1973411077466117421, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 2048090454005845155, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
@@ -456,6 +565,11 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2686947006072916044, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739173692111816112, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -530,7 +644,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 3247911492520392546, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3258531657862855466, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580931157800146716, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -546,6 +670,16 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3830180935161179184, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603504817665167672, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646490101899351861, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -566,6 +700,11 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5022522479555724491, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080484823637967992, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -600,6 +739,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 6218156166679488720, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6250716231155197865, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
@@ -611,6 +755,11 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6931353593328381503, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045837031366780351, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -630,7 +779,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8131756165134959775, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8258712210790183419, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438650161356782062, guid: d387b2b4af41c684598e060c1480b531,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747955629803578337, guid: d387b2b4af41c684598e060c1480b531,
         type: 3}
       propertyPath: m_TagString
       value: Ground
