@@ -28,7 +28,7 @@ public class EnemyManager : MonoBehaviour
             SetHealthBar(barLength);
             if (curHealth <= 0)
             {
-                enemyDead = true;
+                //enemyDead = true;
                 eAnim.SetBool("isDead", true);
                 Debug.Log(enemyValue);
                 Destroy(gameObject, animDelay);

@@ -30,15 +30,20 @@ public class playercontroller : MonoBehaviour
     void Update()
     {
 
-        anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
-        anim.SetBool("Ground", ground);
+        //anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
+        //anim.SetBool("Ground", ground);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && ground)
+        if (HealthManager.playerDead == false)
         {
-            jump = true;
-        }
+            anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
+            anim.SetBool("Ground", ground);
+            if (Input.GetKeyDown(KeyCode.UpArrow) && ground)
+            {
+                jump = true;
+            }
 
-        C19_Shooting();
+            C19_Shooting();
+        }
     }
     void FixedUpdate()
     {
