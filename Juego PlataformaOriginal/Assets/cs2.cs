@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
-public class sc : MonoBehaviour
+public class cs2 : MonoBehaviour
 
 {
     private playercontroller c18;
@@ -18,11 +21,16 @@ public class sc : MonoBehaviour
         if (col.gameObject.tag == "Platform")
         {
             rb2d.velocity = new Vector3(0f, 0f, 0f);
+            //transform.position = new Vector3(-8, 9, 0);//cambio
             c18.transform.parent = col.transform;
             c18.ground = true;
         }
+        
+
+
 
     }
+    
     // Update is called once per frame
     void OnCollisionStay2D(Collision2D col)
     {
@@ -48,9 +56,10 @@ public class sc : MonoBehaviour
         }
         if (col.gameObject.tag == "Platform")
         {
-            
+
             //c18.transform.parent = null;
             c18.ground = false;
+
         }
 
     }

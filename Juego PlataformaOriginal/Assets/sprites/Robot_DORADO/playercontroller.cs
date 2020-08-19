@@ -47,14 +47,14 @@ public class playercontroller : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //Vector3 fixedVelocity = rb2d.velocity;
-        //fixedVelocity.x *= 0.85f;
+        /*Vector3 fixedVelocity = rb2d.velocity;
+        fixedVelocity.x *= 0.85f;
         
-        //if(ground)
-        //{
-            //rb2d.velocity = fixedVelocity;
-        //}
-        
+        if(ground)
+        {
+            rb2d.velocity = fixedVelocity;
+        }
+        */
 
         float h = Input.GetAxis("Horizontal");
         rb2d.AddForce(Vector2.right * speed * h);
@@ -76,7 +76,7 @@ public class playercontroller : MonoBehaviour
             rb2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             jump = false;
         }
-        //Debug.Log(rb2d.velocity.x);
+        Debug.Log(rb2d.position.x);
     }
     
     void OnBecameInvisible()
