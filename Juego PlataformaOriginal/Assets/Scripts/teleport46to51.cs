@@ -22,7 +22,7 @@ public class teleport46to51 : MonoBehaviour
         {
             GameObject A = GameObject.FindGameObjectWithTag("music");
             Destroy(A);
-            SceneManager.LoadScene("nivel5.1", LoadSceneMode.Single);
+            SceneManager.LoadScene("entrada_epica", LoadSceneMode.Single);
         }
     }
 
