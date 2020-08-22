@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playercontroller : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class playercontroller : MonoBehaviour
     public float speed = 2f;
     public bool ground;
     public float jumpPower = 9.5f;
+    public string nameEscene = "";
+    
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -24,6 +27,7 @@ public class playercontroller : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -82,6 +86,12 @@ public class playercontroller : MonoBehaviour
     void OnBecameInvisible()
     {
         transform.position = new Vector3(-8, 9, 0);
+        
+        
+        
+        
+        
+        
     }
 
     public void C19_Shooting()
@@ -94,6 +104,13 @@ public class playercontroller : MonoBehaviour
         else if (Input.GetButtonUp("Fire1"))
         {
             anim.SetBool("isShooting", false);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coins"))
+        {
+            Destroy(other.gameObject);
         }
     }
 }
