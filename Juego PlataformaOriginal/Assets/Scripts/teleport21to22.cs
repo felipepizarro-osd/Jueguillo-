@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class teleport45to46 : MonoBehaviour
+public class teleport21to22 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class teleport45to46 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("nivel4.6", LoadSceneMode.Single);
+            SceneManager.LoadScene("nivel2.2", LoadSceneMode.Single);
         }
     }
 }
