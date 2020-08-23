@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class teleport46to51 : MonoBehaviour
+public class teleport21to22 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,10 +20,7 @@ public class teleport46to51 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            GameObject A = GameObject.FindGameObjectWithTag("music");
-            Destroy(A);
-            SceneManager.LoadScene("nivel5.1", LoadSceneMode.Single);
+            SceneManager.LoadScene("nivel2.2", LoadSceneMode.Single);
         }
     }
-
 }
