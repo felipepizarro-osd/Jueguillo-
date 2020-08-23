@@ -46,6 +46,7 @@ public class CkeckIn : MonoBehaviour
         }
         if (col.gameObject.tag == "Platform")
         {
+            
             c18.transform.parent = null;
             c18.ground = false;
         }
