@@ -27,7 +27,7 @@ public class menu : MonoBehaviour
 
     public void play()
     {
-        SceneManager.LoadScene("juego");
+        SceneManager.LoadScene("hist.1");
     }
 
     public void exit()
