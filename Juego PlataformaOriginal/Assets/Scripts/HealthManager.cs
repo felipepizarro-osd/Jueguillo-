@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
+    private GameObject healthbar; //hektor profe
     public GameObject deathExplosion;
+    
     Rigidbody2D pRB;
+    
+
     public float BumpX, BumpY;
     public int playerHealth;
     public int enemyDamage;
@@ -15,9 +20,12 @@ public class HealthManager : MonoBehaviour
     
     void Start()
     {
+        
         contador = playerHealth;
         playerDead = false;
         pRB = GetComponent<Rigidbody2D>();
+
+        healthbar = GameObject.Find("HealthBar");//hector profe
     }
 
     // Update is called once per frame
@@ -26,6 +34,7 @@ public class HealthManager : MonoBehaviour
         
         if (other.tag == "Enemy")
         {
+            healthbar.SendMessage("TakeDamage", enemyDamage);//cambio importante
             
             playerHealth = (playerHealth - enemyDamage);
             if (playerHealth > 0)
@@ -70,4 +79,6 @@ public class HealthManager : MonoBehaviour
             GetComponent<SpriteRenderer>().color = Color.white;
         }    
     }
+    
+
 }
