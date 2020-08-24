@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
 {
     public Image health;
 
-    float hp, maxHp = 100f;
+    float hp, maxHp = 200f;
 
 
     // Start is called before the first frame update
