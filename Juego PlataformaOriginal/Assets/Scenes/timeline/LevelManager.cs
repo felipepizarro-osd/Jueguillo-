@@ -9,6 +9,6 @@ public class LevelManager : MonoBehaviour
     public void cambiarescena(string nombredeescena)
     {
 
-        SceneManager.LoadScene("hist.2");
+        SceneManager.LoadScene("juego");
     }
 }
