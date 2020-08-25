@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,15 +18,21 @@ public class HealthManager : MonoBehaviour
     public int enemyDamage;
     public static bool playerDead;
     public int contador;
-    
+    public string Health = "HealthBar";
+    public bool Multi;
+
+
     void Start()
-    {
+    {   
+        if (Multi == false){
+            Destroy(gameObject);
+        }
         
         contador = playerHealth;
         playerDead = false;
         pRB = GetComponent<Rigidbody2D>();
 
-        healthbar = GameObject.Find("HealthBar");//hector profe
+        healthbar = GameObject.Find(Health);//hector profe
     }
 
     // Update is called once per frame
