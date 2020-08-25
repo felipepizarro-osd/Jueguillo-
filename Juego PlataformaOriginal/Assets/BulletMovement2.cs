@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour
+public class BulletMovement2 : MonoBehaviour
 {
     public GameObject player;
-    
+
     private Transform playerTrans;
-    
-    
+
+
     private Rigidbody2D bulletRB;
     public float bulletSpeed;
     public float bulletLife;
@@ -20,24 +20,24 @@ public class BulletMovement : MonoBehaviour
     {
         damage = damageRef;
         bulletRB = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        
+        player = GameObject.FindGameObjectWithTag("player2");
+
         playerTrans = player.transform;
     }
     // Start is called before the first frame update
     void Start()
     {  // Condiciones para que al disaparar dispare en la posición correcta
-        if (playerTrans.localScale.x>0)
+        if (playerTrans.localScale.x > 0)
         {
             bulletRB.velocity = new Vector2(bulletSpeed, bulletRB.velocity.y);
             transform.localScale = new Vector3(1, 1, 1);
         }
-        if(playerTrans.localScale.x <= 0)
+        if (playerTrans.localScale.x <= 0)
         {
             bulletRB.velocity = new Vector2(-bulletSpeed, bulletRB.velocity.y);
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        
+
 
 
     }
@@ -50,7 +50,7 @@ public class BulletMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if ( col.tag == "Platform" || col.tag == "Enemy")
+        if (col.tag == "Platform" || col.tag == "Enemy")
         {
             GetComponent<ParticleSystem>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
