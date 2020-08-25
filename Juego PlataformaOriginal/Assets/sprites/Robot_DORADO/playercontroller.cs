@@ -13,7 +13,12 @@ public class playercontroller : MonoBehaviour
     public bool ground;
     public float jumpPower = 9.5f;
     public string nameEscene = "";
-    
+    public string jumpButton = "Jump_P1";
+    public string horizontalCtrl = "Horizontal_P1";
+    public string fire = "Fire1";
+
+
+
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -27,12 +32,13 @@ public class playercontroller : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
 
         //anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
         //anim.SetBool("Ground", ground);
@@ -41,7 +47,7 @@ public class playercontroller : MonoBehaviour
         {
             anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
             anim.SetBool("Ground", ground);
-            if (Input.GetKeyDown(KeyCode.UpArrow) && ground)
+            if (Input.GetButtonDown(jumpButton) && ground)
             {
                 jump = true;
             }
@@ -60,7 +66,7 @@ public class playercontroller : MonoBehaviour
         }
         */
 
-        float h = Input.GetAxis("Horizontal");
+        float h = Input.GetAxis(horizontalCtrl);
         rb2d.AddForce(Vector2.right * speed * h);
 
         float limitedSpeed = Mathf.Clamp(rb2d.velocity.x, -maxSpeed, maxSpeed);
@@ -96,12 +102,12 @@ public class playercontroller : MonoBehaviour
 
     public void C19_Shooting()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(fire))
         {  //playerAnim es lo mismo que anim en este caso
             anim.SetBool("isShooting", true);
             Instantiate(bulletPrefab, bulletSpawner.position, bulletSpawner.rotation);
         }
-        else if (Input.GetButtonUp("Fire1"))
+        else if (Input.GetButtonUp(fire))
         {
             anim.SetBool("isShooting", false);
         }
@@ -113,4 +119,6 @@ public class playercontroller : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
 }
+
