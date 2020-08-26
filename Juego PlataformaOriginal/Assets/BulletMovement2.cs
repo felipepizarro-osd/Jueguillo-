@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class BulletMovement2 : MonoBehaviour
 {
-    public GameObject player;
-
+    public GameObject player2;
     private Transform playerTrans;
-
-
     private Rigidbody2D bulletRB;
     public float bulletSpeed;
     public float bulletLife;
@@ -20,9 +17,9 @@ public class BulletMovement2 : MonoBehaviour
     {
         damage = damageRef;
         bulletRB = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("player2");
+        player2 = GameObject.FindGameObjectWithTag("player2");
 
-        playerTrans = player.transform;
+        playerTrans = player2.transform;
     }
     // Start is called before the first frame update
     void Start()
