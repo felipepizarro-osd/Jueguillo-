@@ -3,24 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class teleport52to53 : MonoBehaviour
+public class coli2_1 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("nivel5.4", LoadSceneMode.Single);
+            GameObject A = GameObject.FindGameObjectWithTag("music");
+            Destroy(A);
+            SceneManager.LoadScene("nivel2.1", LoadSceneMode.Single);
         }
     }
 }
+
+
+
