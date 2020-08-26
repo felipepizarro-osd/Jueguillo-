@@ -80,6 +80,7 @@ public class HealthManager : MonoBehaviour
         if (col.tag == "Enemy")
         {
             GetComponent<SpriteRenderer>().color = Color.white;
+
         }    
     }
     
