@@ -5,7 +5,10 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     public GameObject player;
+    
     private Transform playerTrans;
+    
+    
     private Rigidbody2D bulletRB;
     public float bulletSpeed;
     public float bulletLife;
@@ -18,6 +21,7 @@ public class BulletMovement : MonoBehaviour
         damage = damageRef;
         bulletRB = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        
         playerTrans = player.transform;
     }
     // Start is called before the first frame update
@@ -28,11 +32,14 @@ public class BulletMovement : MonoBehaviour
             bulletRB.velocity = new Vector2(bulletSpeed, bulletRB.velocity.y);
             transform.localScale = new Vector3(1, 1, 1);
         }
-        else
+        if(playerTrans.localScale.x <= 0)
         {
             bulletRB.velocity = new Vector2(-bulletSpeed, bulletRB.velocity.y);
             transform.localScale = new Vector3(-1, 1, 1);
         }
+        
+
+
     }
 
     // Update is called once per frame
