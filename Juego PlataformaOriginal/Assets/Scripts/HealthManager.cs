@@ -19,15 +19,11 @@ public class HealthManager : MonoBehaviour
     public static bool playerDead;
     public int contador;
     public string Health = "HealthBar";
-    public bool Multi;
+    
 
 
-    void Start()
-    {   
-        if (Multi == false){
-            Destroy(gameObject);
-        }
-        
+    void Start() { 
+
         contador = playerHealth;
         playerDead = false;
         pRB = GetComponent<Rigidbody2D>();
