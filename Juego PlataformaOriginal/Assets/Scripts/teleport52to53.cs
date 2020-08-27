@@ -20,7 +20,7 @@ public class teleport52to53 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("nivel5.3", LoadSceneMode.Single);
+            SceneManager.LoadScene("nivel5.4", LoadSceneMode.Single);
         }
     }
 }
