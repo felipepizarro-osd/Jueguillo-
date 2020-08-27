@@ -27,12 +27,12 @@ public class BulletMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {  // Condiciones para que al disaparar dispare en la posición correcta
-        if (playerTrans.localScale.x>0)
+        if (playerTrans.localScale.x >= 0)
         {
             bulletRB.velocity = new Vector2(bulletSpeed, bulletRB.velocity.y);
             transform.localScale = new Vector3(1, 1, 1);
         }
-        if(playerTrans.localScale.x <= 0)
+        else
         {
             bulletRB.velocity = new Vector2(-bulletSpeed, bulletRB.velocity.y);
             transform.localScale = new Vector3(-1, 1, 1);
@@ -46,6 +46,7 @@ public class BulletMovement : MonoBehaviour
     void Update()
     {
         Destroy(gameObject, bulletLife);
+        Debug.Log(playerTrans.localScale.x);
     }
 
     void OnTriggerEnter2D(Collider2D col)
