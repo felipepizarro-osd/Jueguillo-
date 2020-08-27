@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Threading.Tasks;
@@ -9,9 +10,9 @@ public class HealthManager : MonoBehaviour
 {
     private GameObject healthbar; //hektor profe
     public GameObject deathExplosion;
-    
+
     Rigidbody2D pRB;
-    
+
 
     public float BumpX, BumpY;
     public int playerHealth;
@@ -19,15 +20,12 @@ public class HealthManager : MonoBehaviour
     public static bool playerDead;
     public int contador;
     public string Health = "HealthBar";
-    public bool Multi;
+
 
 
     void Start()
-    {   
-        if (Multi == false){
-            Destroy(gameObject);
-        }
-        
+    {
+
         contador = playerHealth;
         playerDead = false;
         pRB = GetComponent<Rigidbody2D>();
@@ -38,11 +36,11 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other)
     {
-        
+
         if (other.tag == "Enemy")
         {
             healthbar.SendMessage("TakeDamage", enemyDamage);//cambio importante
-            
+
             playerHealth = (playerHealth - enemyDamage);
             if (playerHealth > 0)
             {
@@ -67,7 +65,7 @@ public class HealthManager : MonoBehaviour
                 //Instantiate(deathExplosion, transform.position, transform.rotation);
                 playerHealth = contador;
             }
-            
+
         }
     }
     /*
@@ -85,8 +83,8 @@ public class HealthManager : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.white;
 
-        }    
+        }
     }
-    
+
 
 }

@@ -5,10 +5,13 @@ using UnityEngine;
 public class EnemyPersecucion : MonoBehaviour
 {
     private const string Tag = "Player";
+    private const string Tag2 = "player2";
+
     public float visionRadius;
     public float speed;
 
     GameObject player;
+    GameObject player2;
 
     Vector3 initialPosition;
 
@@ -16,6 +19,7 @@ public class EnemyPersecucion : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        player2 = GameObject.FindGameObjectWithTag("player2");
 
         initialPosition = transform.position;
     }
@@ -26,6 +30,7 @@ public class EnemyPersecucion : MonoBehaviour
         Vector3 target = initialPosition; ;
 
         float dist = Vector3.Distance(player.transform.position, transform.position);
+        float dist2 = Vector3.Distance(player2.transform.position, transform.position);
 
         if (dist < visionRadius) target = player.transform.position;
 
@@ -38,8 +43,20 @@ public class EnemyPersecucion : MonoBehaviour
             Debug.DrawLine(transform.position, target, Color.green);
         }
 
-        
-        
+
+
+        if (dist2 < visionRadius) target = player2.transform.position;
+
+        if (dist2 < visionRadius)
+        {
+
+            float fixedSpeed = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+
+            Debug.DrawLine(transform.position, target, Color.green);
+        }
+
+
     }
 
     void OnDrawGizmos()

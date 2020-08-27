@@ -5,10 +5,12 @@ using UnityEngine;
 public class ShootingEnemy : MonoBehaviour
 {
     public GameObject player;
+    public GameObject player2;
     public Transform enemyTrans;
 
     public Animator enemyAnim;
     public bool playerInRange;
+    public bool playerInRange2;
 
     // Start is called before the first frame update
     void Start()
@@ -30,14 +32,31 @@ public class ShootingEnemy : MonoBehaviour
                 enemyTrans.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
+        if (playerInRange)
+        {
+            if (player2.transform.position.x <= enemyTrans.transform.position.x)
+            {
+                enemyTrans.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else if (player2.transform.position.x >= enemyTrans.transform.position.x)
+            {
+                enemyTrans.transform.localScale = new Vector3(-1, 1, 1);
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" )
         {
             enemyAnim.SetBool("playerInRange", true);
             playerInRange = true;
+
+        }
+        if (other.tag == "player2")
+        {
+            enemyAnim.SetBool("playerInRange", true);
+            playerInRange2 = true;
 
         }
     }
