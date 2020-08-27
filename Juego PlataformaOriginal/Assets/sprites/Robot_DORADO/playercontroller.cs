@@ -15,7 +15,7 @@ public class playercontroller : MonoBehaviour
     public string nameEscene = "";
     public string jumpButton = "Jump_P1";
     public string horizontalCtrl = "Horizontal_P1";
-    public string fire = "Fire1";
+    public string fire = "Fire_P1";
 
 
 

@@ -11,6 +11,16 @@ public class EnemyIA : MonoBehaviour
 
     public bool goRight;
 
+<<<<<<< HEAD
+=======
+    public ShootingEnemy range;
+
+    void Awake()
+    {
+        range = GetComponentInChildren<ShootingEnemy>();
+    }
+
+>>>>>>> origin/respaldo7
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +37,7 @@ public class EnemyIA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (goRight == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, endPoint.transform.position, enemySpeed * Time.deltaTime);
@@ -47,4 +58,36 @@ public class EnemyIA : MonoBehaviour
             }
         }
     }
+=======
+        if (range.playerInRange == false)
+        {
+
+
+            if (goRight == true)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+
+                transform.position = Vector3.MoveTowards(transform.position, endPoint.transform.position, enemySpeed * Time.deltaTime);
+                if (transform.position == endPoint.transform.position)
+                {
+                    transform.localScale = new Vector3(-1, 1, 1);
+                    goRight = false;
+                }
+            }
+
+            if (!goRight)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+
+                transform.position = Vector3.MoveTowards(transform.position, startPoint.transform.position, enemySpeed * Time.deltaTime);
+                if (transform.position == startPoint.transform.position)
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                    goRight = true;
+                }
+            }
+        }
+    }
+
+>>>>>>> origin/respaldo7
 }
