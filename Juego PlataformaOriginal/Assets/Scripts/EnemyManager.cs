@@ -23,7 +23,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (col.tag == "Bullet")
         {
-            curHealth = (curHealth - BulletMovement.damage) - BulletMovement2.damage; 
+            curHealth = (curHealth - BulletMovement2.damage) - BulletMovement.damage; 
             float barLength = curHealth / enemyHealth;
             SetHealthBar(barLength);
             if (curHealth <= 0)
