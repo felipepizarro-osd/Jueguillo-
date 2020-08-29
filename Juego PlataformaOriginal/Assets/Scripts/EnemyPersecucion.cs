@@ -30,7 +30,7 @@ public class EnemyPersecucion : MonoBehaviour
         Vector3 target = initialPosition; ;
 
         float dist = Vector3.Distance(player.transform.position, transform.position);
-        float dist2 = Vector3.Distance(player2.transform.position, transform.position);
+        //float dist2 = Vector3.Distance(player2.transform.position, transform.position);
 
         if (dist < visionRadius) target = player.transform.position;
 
@@ -45,16 +45,16 @@ public class EnemyPersecucion : MonoBehaviour
 
 
 
-        if (dist2 < visionRadius) target = player2.transform.position;
+        //else if (dist < visionRadius) target = player2.transform.position;
 
-        if (dist2 < visionRadius)
-        {
+        //else if (dist < visionRadius)
+        //{
 
-            float fixedSpeed = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+          //  float fixedSpeed = speed * Time.deltaTime;
+            //transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
 
-            Debug.DrawLine(transform.position, target, Color.green);
-        }
+            //Debug.DrawLine(transform.position, target, Color.green);
+        //}
 
 
     }

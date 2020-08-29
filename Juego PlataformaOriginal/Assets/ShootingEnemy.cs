@@ -53,7 +53,7 @@ public class ShootingEnemy : MonoBehaviour
             playerInRange = true;
 
         }
-        if (other.tag == "player2")
+        else if (other.tag == "player2")
         {
             enemyAnim.SetBool("playerInRange", true);
             playerInRange2 = true;

@@ -8,7 +8,8 @@ public class LevelManager : MonoBehaviour
 
     public void cambiarescena(string nombredeescena)
     {
-
-        SceneManager.LoadScene("juego");
+        GameObject A = GameObject.FindGameObjectWithTag("music");
+        Destroy(A);
+        SceneManager.LoadScene("nivel1.0");
     }
 }

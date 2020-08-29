@@ -19,7 +19,8 @@ public class HealthManager : MonoBehaviour
     public int enemyDamage;
     public static bool playerDead;
     public int contador;
-    public string Health = "HealthBar";
+
+    public GameObject Health;
 
 
 
@@ -30,7 +31,7 @@ public class HealthManager : MonoBehaviour
         playerDead = false;
         pRB = GetComponent<Rigidbody2D>();
 
-        healthbar = GameObject.Find(Health);//hector profe
+        healthbar = Health;//hector profe
     }
 
     // Update is called once per frame

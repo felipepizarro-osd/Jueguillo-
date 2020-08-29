@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 6811649268233827516}
   - component: {fileID: 6811649268233827505}
   - component: {fileID: 6811649266425245991}
-  - component: {fileID: 6811649266425245990}
   m_Layer: 0
   m_Name: c18
   m_TagString: Player
@@ -247,6 +246,9 @@ MonoBehaviour:
   ground: 0
   jumpPower: 12.25
   nameEscene: 
+  jumpButton: Jump_P1
+  horizontalCtrl: Horizontal_P1
+  fire: Fire_P1
   bulletSpawner: {fileID: 6811649267988628715}
   bulletPrefab: {fileID: 4673796189758401260, guid: d9e0ba133bcde9840897e570f3fcddee,
     type: 3}
@@ -285,15 +287,4 @@ MonoBehaviour:
   playerHealth: 100
   enemyDamage: 25
   contador: 0
---- !u!114 &6811649266425245990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6811649268233827511}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c5be891e4965b248905f6149a4ea890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Health: {fileID: 0}

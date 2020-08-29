@@ -20,6 +20,8 @@ public class teleport15to21 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            GameObject A = GameObject.FindGameObjectWithTag("music");
+            Destroy(A);
             SceneManager.LoadScene("nivel2.1", LoadSceneMode.Single);
         }
     }

@@ -106,6 +106,8 @@ public class playercontroller : MonoBehaviour
         {  //playerAnim es lo mismo que anim en este caso
             anim.SetBool("isShooting", true);
             Instantiate(bulletPrefab, bulletSpawner.position, bulletSpawner.rotation);
+            Debug.Log(bulletPrefab);
+
         }
         else if (Input.GetButtonUp(fire))
         {

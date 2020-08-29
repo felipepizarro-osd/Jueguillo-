@@ -696,7 +696,9 @@ MonoBehaviour:
   animDelay: 0.45
   healthBar: {fileID: 2012385958}
   enemyHealth: 100
+  curHealth: 0
   enemyValue: 100
+  teleport: {fileID: 0}
 --- !u!95 &445205173
 Animator:
   serializedVersion: 3
@@ -1856,7 +1858,9 @@ MonoBehaviour:
   animDelay: 0.45
   healthBar: {fileID: 1056731671}
   enemyHealth: 100
+  curHealth: 0
   enemyValue: 100
+  teleport: {fileID: 0}
 --- !u!95 &821848024
 Animator:
   serializedVersion: 3
@@ -2636,8 +2640,8 @@ PrefabInstance:
     - target: {fileID: 6811649266425245991, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
       propertyPath: Health
-      value: HealthBar2
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 1072475808}
     - target: {fileID: 6811649266425245991, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
       propertyPath: Multi
@@ -3460,7 +3464,9 @@ MonoBehaviour:
   animDelay: 0.45
   healthBar: {fileID: 718584319}
   enemyHealth: 100
+  curHealth: 0
   enemyValue: 100
+  teleport: {fileID: 0}
 --- !u!95 &1235744586
 Animator:
   serializedVersion: 3
@@ -4405,7 +4411,9 @@ MonoBehaviour:
   animDelay: 0.45
   healthBar: {fileID: 1931465693}
   enemyHealth: 100
+  curHealth: 0
   enemyValue: 100
+  teleport: {fileID: 0}
 --- !u!95 &1558032610
 Animator:
   serializedVersion: 3
@@ -5797,6 +5805,11 @@ PrefabInstance:
       propertyPath: Multi
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6811649266425245991, guid: d40f41bf5f9e20e46989749b902103ab,
+        type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 776326606}
     - target: {fileID: 6811649268233827506, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
       propertyPath: m_LocalPosition.x

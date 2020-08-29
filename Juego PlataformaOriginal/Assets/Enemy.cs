@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyManager : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     private Animator eAnim;
     public float animDelay;
     public GameObject healthBar;
     public float enemyHealth;
-    public float curHealth; 
+    public float curHealth;
     public int enemyValue;
     public static bool enemyDead = false;
-    public GameObject teleport;
-
 
     void Start()
     {
@@ -26,7 +24,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (col.tag == "Bullet")
         {
-            curHealth = (curHealth - BulletMovement2.damage) - BulletMovement.damage; 
+            curHealth = (curHealth - BulletMovement2.damage) - BulletMovement.damage;
             float barLength = curHealth / enemyHealth;
             SetHealthBar(barLength);
             if (curHealth <= 0)
@@ -35,17 +33,19 @@ public class EnemyManager : MonoBehaviour
                 eAnim.SetBool("isDead", true);
                 Debug.Log(enemyValue);
                 Destroy(gameObject, animDelay);
-                teleport.SetActive(true);
-            
+                SceneManager.LoadScene(escenaActual() + 1);
             }
         }
     }
- 
-    public void  SetHealthBar(float eHealth)
+    int escenaActual()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
+    }
+    public void SetHealthBar(float eHealth)
     {
         healthBar.transform.localScale = new Vector3(eHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
-    
-        
-    
+
+
+
 }

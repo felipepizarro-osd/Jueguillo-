@@ -1,17 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
     public int coinValue = 1;
+
+
     // Start is called before the first frame update
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") )
         {
             ScoreManager.instance.ChangeScore(coinValue);
+        }
+        if (other.gameObject.CompareTag("player2"))
+        {
+            ScoreManager2.instance2.ChangeScore2(coinValue);
         }
     }
 }

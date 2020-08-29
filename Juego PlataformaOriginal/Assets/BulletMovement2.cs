@@ -27,12 +27,12 @@ public class BulletMovement2 : MonoBehaviour
         if (playerTrans.localScale.x > 0)
         {
             bulletRB.velocity = new Vector2(bulletSpeed, bulletRB.velocity.y);
-            transform.localScale = new Vector3(1, 1, 1);
+            playerTrans.localScale = new Vector3(1, 1, 1);
         }
-        if (playerTrans.localScale.x <= 0)
+        if (playerTrans.localScale.x < 0)
         {
             bulletRB.velocity = new Vector2(-bulletSpeed, bulletRB.velocity.y);
-            transform.localScale = new Vector3(-1, 1, 1);
+            playerTrans.localScale = new Vector3(-1, 1, 1);
         }
 
 
