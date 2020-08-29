@@ -50,6 +50,7 @@ public class playercontroller : MonoBehaviour
             if (Input.GetButtonDown(jumpButton) && ground)
             {
                 jump = true;
+
             }
 
             C19_Shooting();

@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 97524402}
   - component: {fileID: 97524401}
   - component: {fileID: 97524400}
+  - component: {fileID: 97524403}
   m_Layer: 5
   m_Name: CanvasHealth (1)
   m_TagString: Untagged
@@ -473,6 +474,18 @@ Canvas:
   m_SortingLayerID: 996326169
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &97524403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97524398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069fdcb6a11b78a43b3eba7512848ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &124878408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,8 +2537,8 @@ PrefabInstance:
     - target: {fileID: 6811649266425245991, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
       propertyPath: Health
-      value: HealthBar2
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 238490030}
     - target: {fileID: 6811649266425245991, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
       propertyPath: Multi
@@ -2634,12 +2647,12 @@ PrefabInstance:
     - target: {fileID: 6811649268233827506, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.510565
+      value: -6.53
       objectReference: {fileID: 0}
     - target: {fileID: 6811649268233827506, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 9.094363
+      value: 9.02
       objectReference: {fileID: 0}
     - target: {fileID: 6811649268233827506, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
@@ -2757,6 +2770,24 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 700433811}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &700433813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6811649268233827511, guid: d40f41bf5f9e20e46989749b902103ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 700433811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &700433814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700433813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069fdcb6a11b78a43b3eba7512848ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &704469756
 GameObject:
   m_ObjectHideFlags: 0
@@ -6463,6 +6494,11 @@ PrefabInstance:
       propertyPath: Multi
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6811649266425245991, guid: d40f41bf5f9e20e46989749b902103ab,
+        type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 363419525}
     - target: {fileID: 6811649268233827506, guid: d40f41bf5f9e20e46989749b902103ab,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -19,6 +19,12 @@ public class transiciones : MonoBehaviour
     {
         _transicionAnim.SetTrigger("exit");
         yield return new WaitForSeconds(1);
+        if (scene != "hist.1")
+        {
+            GameObject A = GameObject.FindGameObjectWithTag("music");
+            Destroy(A);
+        }
         SceneManager.LoadScene(scene);
+
     }
 }
