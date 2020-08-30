@@ -26,6 +26,9 @@ public class playercontroller : MonoBehaviour
 
     public Transform bulletSpawner;
     public GameObject bulletPrefab;
+
+    public GameObject SonidoSalto;
+    public GameObject S_disparo;
     
     // Start is called before the first frame update
     void Start()
@@ -49,6 +52,7 @@ public class playercontroller : MonoBehaviour
             anim.SetBool("Ground", ground);
             if (Input.GetButtonDown(jumpButton) && ground)
             {
+                Instantiate(SonidoSalto);
                 jump = true;
             }
 
@@ -105,7 +109,9 @@ public class playercontroller : MonoBehaviour
         if (Input.GetButtonDown(fire))
         {  //playerAnim es lo mismo que anim en este caso
             anim.SetBool("isShooting", true);
+           
             Instantiate(bulletPrefab, bulletSpawner.position, bulletSpawner.rotation);
+            Instantiate(S_disparo);
             Debug.Log(bulletPrefab);
 
         }
