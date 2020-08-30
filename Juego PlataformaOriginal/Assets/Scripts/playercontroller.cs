@@ -54,6 +54,7 @@ public class playercontroller : MonoBehaviour
             {
                 Instantiate(SonidoSalto);
                 jump = true;
+
             }
 
             C19_Shooting();
