@@ -4090,6 +4090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971294438}
   - component: {fileID: 971294439}
+  - component: {fileID: 971294440}
   m_Layer: 0
   m_Name: GameObject (11)
   m_TagString: Ground
@@ -4122,7 +4123,7 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
@@ -4145,6 +4146,25 @@ EdgeCollider2D:
   - {x: 1.60641, y: 0.9498501}
   - {x: 1.879961, y: 0.9682846}
   - {x: 2.259326, y: 0.94806004}
+--- !u!251 &971294440
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971294437}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &976555132
 GameObject:
   m_ObjectHideFlags: 0
@@ -4375,7 +4395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animDelay: 0.45
   healthBar: {fileID: 1803477410}
-  enemyHealth: 1000
+  enemyHealth: 500
   curHealth: 0
   enemyValue: 100
   teleport: {fileID: 0}
@@ -5932,7 +5952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animDelay: 0.45
   healthBar: {fileID: 842079292}
-  enemyHealth: 1000
+  enemyHealth: 500
   curHealth: 0
   enemyValue: 100
   teleport: {fileID: 0}
