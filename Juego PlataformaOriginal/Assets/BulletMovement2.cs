@@ -47,17 +47,12 @@ public class BulletMovement2 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Platform" || col.tag == "Enemy")
+        if (col.tag == "Platform" || col.tag == "Enemy" || col.tag == "EnemyBullet" || col.tag == "Ground")
         {
             GetComponent<ParticleSystem>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
         }
-        if (col.tag == "Ground")
-        {
-            GetComponent<ParticleSystem>().Play();
-            GetComponent<SpriteRenderer>().enabled = false;
-            GetComponent<CircleCollider2D>().enabled = false;
-        }
+        
     }
 }
