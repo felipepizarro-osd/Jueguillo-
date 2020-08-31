@@ -15,16 +15,21 @@ public class ScoreManager2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        text2.text = "x" + Coin.contador2.ToString();
         if (instance2 == null)
         {
             instance2 = this;
         }
 
     }
+    void Update()
+    {
+        text2.text = "x" + Coin.contador2.ToString();
+    }
     public void ChangeScore2(int coinValue)
     {
         score2 += coinValue;
-        text2.text = "X" + score2.ToString();
+        //text2.text = "X" + score2.ToString();
         Debug.Log(score2);
     }
 }
