@@ -25,14 +25,14 @@ public class EnemyBullet : MonoBehaviour
         if (playerTrans.localPosition.x < transform.localPosition.x)
         {
             bulletRB.velocity = new Vector2(-bulletSpeed, bulletRB.velocity.y);
-            GetComponent<SpriteRenderer>().flipY = false;
-            //transform.localScale = new Vector3(0.8f, 0.8f, 1);
+            //GetComponent<SpriteRenderer>().flipY = false;
+            transform.localScale = new Vector3(0.8f, 0.8f, 1);
         }
         else
         {
             bulletRB.velocity = new Vector2(bulletSpeed, bulletRB.velocity.y);
-            //transform.localScale = new Vector3(0.8f, -0.8f, 1);
-            GetComponent<SpriteRenderer>().flipY = true;
+            transform.localScale = new Vector3(0.8f, -0.8f, 1);
+            //GetComponent<SpriteRenderer>().flipY = true;
         }
     }
 

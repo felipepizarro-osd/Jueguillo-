@@ -10,6 +10,7 @@ public class JefeManager : MonoBehaviour
     public Image health;
 
     public AudioSource deathSFX;
+    public GameObject teleport;
 
     public float maxHealth; //valor maximo de salude
     float curHealth; //valor actual 
@@ -27,7 +28,8 @@ public class JefeManager : MonoBehaviour
     {
         if(other.tag == "Bullet")
         {
-            curHealth -= BulletMovement.damage;
+            curHealth -= BulletMovement.damage; //ESE NO ES DE LA BALA DEL PERSONAJE 
+            //INTENTA HACER UN BULLET MOVEMENT DIFERENTE
             health.fillAmount = curHealth / maxHealth;
 
             if (curHealth <= 0)
@@ -35,6 +37,7 @@ public class JefeManager : MonoBehaviour
                 deathSFX.Play();
                 eAnim.SetBool("isDead", true);
                 Destroy(gameObject, animDelay);
+                teleport.SetActive(true);
 
             }
         }
