@@ -28,7 +28,8 @@ public class JefeManager : MonoBehaviour
     {
         if(other.tag == "Bullet")
         {
-            curHealth -= BulletMovement.damage;
+            curHealth -= BulletMovement.damage; //ESE NO ES DE LA BALA DEL PERSONAJE 
+            //INTENTA HACER UN BULLET MOVEMENT DIFERENTE
             health.fillAmount = curHealth / maxHealth;
 
             if (curHealth <= 0)
