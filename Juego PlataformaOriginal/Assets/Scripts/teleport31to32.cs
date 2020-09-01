@@ -17,7 +17,7 @@ public class teleport31to32 : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "player2")
         {
             SceneManager.LoadScene("nivel3.2", LoadSceneMode.Single);
         }
