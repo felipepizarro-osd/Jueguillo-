@@ -1096,6 +1096,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5369864880294399, guid: ee8700be4312a5a4bb04719c8da755b5, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1857868752}
+    - target: {fileID: 5369864880294399, guid: ee8700be4312a5a4bb04719c8da755b5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369864880294399, guid: ee8700be4312a5a4bb04719c8da755b5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 996326169
+      objectReference: {fileID: 0}
     - target: {fileID: 5369865940595108, guid: ee8700be4312a5a4bb04719c8da755b5, type: 3}
       propertyPath: player2
       value: 
@@ -1115,6 +1127,10 @@ PrefabInstance:
     - target: {fileID: 5369866267547218, guid: ee8700be4312a5a4bb04719c8da755b5, type: 3}
       propertyPath: teleport
       value: 
+      objectReference: {fileID: 913507781}
+    - target: {fileID: 5369866267547218, guid: ee8700be4312a5a4bb04719c8da755b5, type: 3}
+      propertyPath: enemyHealth
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5369866493266000, guid: ee8700be4312a5a4bb04719c8da755b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1895,7 +1911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &913507782
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1935,7 +1951,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e5b92834af1e1854c8f6a7191862457c, type: 3}
+  m_Sprite: {fileID: -7137571132009621253, guid: bb2785e082124a64f9c7f25ad2f8b406,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1985,7 +2002,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0006008148, y: 0.5983219}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1996,7 +2013,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9987984, y: 2.1966438}
   m_EdgeRadius: 0
 --- !u!1 &974798917
 GameObject:
@@ -4214,6 +4231,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'resistencia: C19 ... se corttt.... la comu.. acion ...derrotalo ahora!!!
         eres nuestra ultima esperanza.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058179296371725567, guid: 9dde047a48bc8c147b2cfe3af1fc49ea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.79992676
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dde047a48bc8c147b2cfe3af1fc49ea, type: 3}

@@ -10,6 +10,7 @@ public class JefeManager : MonoBehaviour
     public Image health;
 
     public AudioSource deathSFX;
+    public GameObject teleport;
 
     public float maxHealth; //valor maximo de salude
     float curHealth; //valor actual 
@@ -35,6 +36,7 @@ public class JefeManager : MonoBehaviour
                 deathSFX.Play();
                 eAnim.SetBool("isDead", true);
                 Destroy(gameObject, animDelay);
+                teleport.SetActive(true);
 
             }
         }
