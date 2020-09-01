@@ -29,13 +29,13 @@ public class E2ShootingEnemy : MonoBehaviour
     {
         if (playerInRange)
         {
-            if (player.transform.position.x <= enemyTrans.transform.position.x)
-            {
-                enemyTrans.transform.localScale = new Vector3(1, 1, 1);
-            }
-            else if (player.transform.position.x >= enemyTrans.transform.position.x)
+            if (player.transform.position.x < enemyTrans.transform.position.x)
             {
                 enemyTrans.transform.localScale = new Vector3(-1, 1, 1);
+            }
+            if (player.transform.position.x > enemyTrans.transform.position.x)
+            {
+                enemyTrans.transform.localScale = new Vector3(1, 1, 1);
             }
             shootingCount += Time.deltaTime;
             if(shootingCount >= shootingRate)
@@ -45,9 +45,21 @@ public class E2ShootingEnemy : MonoBehaviour
                 GetComponent<AudioSource>().PlayOneShot(bulletSFX);
             }
         }
+        Debug.Log(enemyTrans.transform.localScale.x);
+        
+
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+      //  if (other.tag == "Player")
+        //{
+          //  enemyAnim.SetBool("playerInRange", true);
+           // playerInRange = true;
+
+        //}
+    //}
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
@@ -55,6 +67,7 @@ public class E2ShootingEnemy : MonoBehaviour
             playerInRange = true;
 
         }
+
     }
 
     void OnTriggerExit2D(Collider2D other)

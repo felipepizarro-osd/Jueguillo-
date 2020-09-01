@@ -38,23 +38,23 @@ public class EnemyIA : MonoBehaviour
         {
             if (goRight == true)
             {
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(-1, 1, 1);
 
                 transform.position = Vector3.MoveTowards(transform.position, endPoint.transform.position, enemySpeed * Time.deltaTime);
                 if (transform.position == endPoint.transform.position)
                 {
-                    transform.localScale = new Vector3(-1, 1, 1); // importante
+                    transform.localScale = new Vector3(1, 1, 1); // importante
                     goRight = false;
                 }
             }
 
             if (!goRight)
             {
-                transform.localScale = new Vector3(-1, 1, 1); // importante para cambiar
+                transform.localScale = new Vector3(1, 1, 1); // importante para cambiar
                 transform.position = Vector3.MoveTowards(transform.position, startPoint.transform.position, enemySpeed * Time.deltaTime);
                 if (transform.position == startPoint.transform.position)
                 {
-                    transform.localScale = new Vector3(1, 1, 1);
+                    transform.localScale = new Vector3(-1, 1, 1);
                     goRight = true;
                 }
             }
