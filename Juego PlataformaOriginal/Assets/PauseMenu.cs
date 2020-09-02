@@ -50,6 +50,8 @@ public class PauseMenu : MonoBehaviour
         GameObject A = GameObject.FindGameObjectWithTag("music");
         Destroy(A);
         Time.timeScale = 1f;
+        Coin.contador = 0;
+        Coin.contador2 = 0;
         SceneManager.LoadScene("Menu");
     }
 

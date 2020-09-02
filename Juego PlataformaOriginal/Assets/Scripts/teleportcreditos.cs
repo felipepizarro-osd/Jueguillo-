@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class teleportcreditos : MonoBehaviour
 {
+    public Animator TransitionLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,13 @@ public class teleportcreditos : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "player2")
         {
-            GameObject A = GameObject.FindGameObjectWithTag("music");
-            Destroy(A);
-            SceneManager.LoadScene("creditos", LoadSceneMode.Single);
+            StartCoroutine("LoadLevel");
         }
+    }
+    IEnumerator LoadLevel()
+    {
+        TransitionLevel.SetTrigger("StartLevel5.5");
+        yield return new WaitForSeconds(3.6f);
+        SceneManager.LoadScene("creditos");
     }
 }

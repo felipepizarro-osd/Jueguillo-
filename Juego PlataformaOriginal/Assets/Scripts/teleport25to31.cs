@@ -3,18 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class teleport25to31 : MonoBehaviour {
+public class teleport25to31 : MonoBehaviour
+{
+    public Animator TransitionLevel;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "player2")
         {
-            GameObject A = GameObject.FindGameObjectWithTag("music");
-            Destroy(A);
-            SceneManager.LoadScene("nivel3.1", LoadSceneMode.Single);
+            StartCoroutine("LoadLevel");
         }
     }
-
-
-
-
+    IEnumerator LoadLevel()
+    {
+        TransitionLevel.SetTrigger("StartLevel");
+        yield return new WaitForSeconds(1);
+        GameObject A = GameObject.FindGameObjectWithTag("music");
+        Destroy(A);
+        SceneManager.LoadScene("nivel3.1");
+    }
 }

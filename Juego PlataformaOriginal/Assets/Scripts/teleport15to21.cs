@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class teleport15to21 : MonoBehaviour
 {
+    public Animator TransitionLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,15 @@ public class teleport15to21 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "player2")
         {
-            GameObject A = GameObject.FindGameObjectWithTag("music");
-            Destroy(A);
-            SceneManager.LoadScene("nivel2.1", LoadSceneMode.Single);
+            StartCoroutine("LoadLevel");
         }
+    }
+    IEnumerator LoadLevel()
+    {
+        TransitionLevel.SetTrigger("StartLevel");
+        yield return new WaitForSeconds(1);
+        GameObject A = GameObject.FindGameObjectWithTag("music");
+        Destroy(A);
+        SceneManager.LoadScene("nivel2.1");
     }
 }
