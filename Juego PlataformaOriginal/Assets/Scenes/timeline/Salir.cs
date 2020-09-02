@@ -5,7 +5,8 @@ public class Salir : MonoBehaviour
 {
     public void SaliR()
     {
-        Application.Quit();
         Debug.Log("Se ah salido del juego");
+        Application.Quit();
+        
     }
 }
