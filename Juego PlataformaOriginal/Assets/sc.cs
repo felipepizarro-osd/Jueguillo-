@@ -28,6 +28,7 @@ public class sc : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground")
         {
+            c18.transform.parent = col.transform;
             c18.ground = true;
         }
         if (col.gameObject.tag == "Platform")
@@ -42,11 +43,13 @@ public class sc : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground")
         {
+            c18.transform.parent = col.transform;
             c18.ground = false;
         }
         if (col.gameObject.tag == "Platform")
         {
-            c18.transform.parent = null;
+            
+            //c18.transform.parent = null;
             c18.ground = false;
         }
 
