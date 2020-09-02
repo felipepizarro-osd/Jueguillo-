@@ -20,6 +20,8 @@ public class teleport44to45 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "player2")
         {
+            GameObject A = GameObject.FindGameObjectWithTag("music");
+            Destroy(A);
             SceneManager.LoadScene("nivel5.1", LoadSceneMode.Single);
         }
     }

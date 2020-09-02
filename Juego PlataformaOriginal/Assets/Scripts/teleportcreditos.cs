@@ -20,6 +20,8 @@ public class teleportcreditos : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "player2")
         {
+            GameObject A = GameObject.FindGameObjectWithTag("music");
+            Destroy(A);
             SceneManager.LoadScene("creditos", LoadSceneMode.Single);
         }
     }
